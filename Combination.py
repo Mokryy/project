@@ -1,10 +1,11 @@
+import Constants
+
 class Combination:
 
     def __init__(self, rank, cards_ranks):
         self.rank = rank
         self.cards_ranks = cards_ranks
 
-        """1 це поточна комбінація вища, 0 це однакові, -1 поточна комбінація нижча  """
     def compare(self, another_combination):
 
         if self.rank > another_combination.rank:
@@ -19,4 +20,6 @@ class Combination:
                     return -1
             return 0
 
+    def getCombinationForPrint(self):
+        return Constants.all_combinations[self.rank]
 

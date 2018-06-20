@@ -8,7 +8,7 @@ class Dyller:
 
     def shuffleDeck(self):
         for rank in range(0, 13):
-            for suit in range(0, 3):
+            for suit in range(0, 4):
                 currentCard = Card(rank, suit)
                 self.deck.append(currentCard)
 
@@ -264,6 +264,9 @@ class Dyller:
         kik = self.getKiker(card_list)
         if kik != None:
             return kik
+
+    def __str__(self):
+        return (self.card.rank)
 
 
 
